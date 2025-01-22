@@ -1,9 +1,9 @@
 #!/bin/bash
-# Skip Rust installation as it's already present in Render
-echo "Rust is already installed. Skipping Rust setup."
+echo "Starting build process..."
 
-# Ensure the cargo environment is sourced
-source /opt/render/.cargo/env
-
-# Install Python dependencies
+# Ensure Python dependencies are installed
+pip install --upgrade pip
 pip install -r requirements.txt
+
+
+
