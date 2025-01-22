@@ -1,4 +1,9 @@
 #!/bin/bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-source $HOME/.cargo/env
-pip install -r requirements.txt 
+# Skip Rust installation as it's already present in Render
+echo "Rust is already installed. Skipping Rust setup."
+
+# Ensure the cargo environment is sourced
+source /opt/render/.cargo/env
+
+# Install Python dependencies
+pip install -r requirements.txt
